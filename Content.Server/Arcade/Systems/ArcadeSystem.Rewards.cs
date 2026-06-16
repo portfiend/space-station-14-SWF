@@ -6,10 +6,11 @@ public sealed partial class ArcadeSystem
 {
     private void OnArcadeRewardComponentInit(Entity<ArcadeRewardComponent> machine, ref ComponentInit args)
     {
-        var random = new Random();
         var comp = machine.Comp;
+        var min = Math.Min(comp.RewardMinAmount, comp.RewardMaxAmount);
+        var max = Math.Max(comp.RewardMinAmount, comp.RewardMaxAmount);
 
-        comp.RewardAmount = random.Next(comp.RewardMinAmount, comp.RewardMaxAmount + 1);
+        comp.RewardAmount = _random.Next(min, max + 1);
     }
 
     private void OnArcadeRewardGameEnded(Entity<ArcadeRewardComponent> machine, ref ArcadeGameEndedEvent args)
