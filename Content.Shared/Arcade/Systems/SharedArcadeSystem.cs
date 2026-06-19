@@ -14,13 +14,13 @@ public sealed class ArcadeHighScoreEntry : IComparable
     /// <summary>
     /// The name of the player associated with this high score entry.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
+    [ViewVariables]
     public string Name;
 
     /// <summary>
     /// The score associated with this high score entry.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
+    [ViewVariables]
     public int Score;
 
     public ArcadeHighScoreEntry(string name, int score)

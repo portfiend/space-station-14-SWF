@@ -40,7 +40,7 @@ public sealed partial class ArcadeSystem
         if (args.Player == null || args.Score == null)
             return;
 
-        var name = MetaData(args.Player.Value).EntityName;
+        var name = Identity.Name(args.Player.Value, EntityManager);
         var entry = new ArcadeHighScoreEntry(name, args.Score.Value);
 
         SubmitScore(ent, entry, args.Player.Value);

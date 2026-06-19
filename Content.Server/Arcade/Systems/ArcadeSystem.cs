@@ -85,11 +85,13 @@ public sealed partial class ArcadeSystem : SharedArcadeSystem
     private void FinishGame(EntityUid? player, EntityUid machine, ArcadeGameResult result, int? score = null)
     {
         var endedEvent = new ArcadeGameEndedEvent(player, result, score);
-        var finishEvent = new FinishedArcadeGameEvent(result, score);
-
         RaiseLocalEvent(machine, ref endedEvent);
+        
         if (player != null)
+        {
+            var finishEvent = new FinishedArcadeGameEvent(result, score);
             RaiseLocalEvent(player.Value, ref finishEvent);
+        }
     }
 }
 
