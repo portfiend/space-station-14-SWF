@@ -4,6 +4,7 @@ using Content.Server.Arcade.Components;
 using Content.Server.Arcade.Prototypes;
 using Content.Shared.Arcade.Systems;
 using Content.Shared.CCVar;
+using Content.Shared.IdentityManagement;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
