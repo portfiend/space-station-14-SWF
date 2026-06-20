@@ -86,7 +86,7 @@ public sealed partial class ArcadeSystem : SharedArcadeSystem
     {
         var endedEvent = new ArcadeGameEndedEvent(player, result, score);
         RaiseLocalEvent(machine, ref endedEvent);
-        
+
         if (player != null)
         {
             var finishEvent = new FinishedArcadeGameEvent(result, score);
@@ -131,23 +131,8 @@ public record struct FinishedArcadeGameEvent(ArcadeGameResult Result, int? Score
 /// </remarks>
 public enum ArcadeGameResult
 {
-    /// <summary>
-    /// Player has won the game.
-    /// </summary>
     Win,
-
-    /// <summary>
-    /// Game ends, and the player neither won nor lost.
-    /// </summary>
     Draw,
-
-    /// <summary>
-    /// The player forfeits the game.
-    /// </summary>
     Forfeit,
-
-    /// <summary>
-    /// The player lost the game.
-    /// </summary>
     Loss,
 }
