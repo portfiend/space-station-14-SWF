@@ -23,6 +23,7 @@ public sealed partial class ArcadeSystem
     ///     Produce a reward from an arcade machine, if the machine is capable of doing so.
     /// </summary>
     /// <param name="machine">The machine to spawn rewards from.</param>
+    [PublicAPI]
     public void SpawnReward(Entity<ArcadeRewardComponent> machine)
     {
         if (machine.Comp.RewardAmount <= 0)
