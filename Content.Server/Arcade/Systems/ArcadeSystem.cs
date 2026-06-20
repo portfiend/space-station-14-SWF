@@ -1,5 +1,4 @@
-using Content.Server.Arcade.Components;
-using Content.Server.Arcade.Prototypes;
+using Content.Shared.Arcade.Prototypes;
 using Content.Shared.Arcade.Systems;
 using Content.Shared.EntityTable;
 using Robust.Shared.Configuration;

@@ -1,6 +1,6 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.Arcade.Prototypes;
+namespace Content.Shared.Arcade.Prototypes;
 
 /// <summary>
 ///     Represents a local and global scoreboard for a particular arcade game.

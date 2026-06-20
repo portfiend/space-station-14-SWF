@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Arcade.Components;
-using Content.Server.Arcade.Prototypes;
+using Content.Shared.Arcade.Prototypes;
 using Content.Shared.Arcade.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.IdentityManagement;
