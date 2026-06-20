@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server.Arcade.Components;
+using Content.Shared.Arcade.Components;
 using Content.Shared.Arcade.Prototypes;
 using Content.Shared.Arcade.Systems;
 using Content.Shared.CCVar;

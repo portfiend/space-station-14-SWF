@@ -2,7 +2,7 @@ using Content.Shared.Arcade.Prototypes;
 using Content.Shared.Arcade.Systems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.Arcade.Components;
+namespace Content.Shared.Arcade.Components;
 
 /// <summary>
 /// Arcade machines with this component have three kinds of scoreboards: machine, local, and global.

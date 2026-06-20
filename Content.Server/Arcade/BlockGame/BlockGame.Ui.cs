@@ -1,8 +1,6 @@
 using System.Linq;
-using Robust.Shared.Player;
 using Content.Shared.Arcade.BlockGame;
-using Content.Server.Arcade.Systems;
-using Content.Server.Arcade.Components;
+using Content.Shared.Arcade.Components;
 
 namespace Content.Server.Arcade.BlockGame;
 

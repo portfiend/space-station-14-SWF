@@ -1,4 +1,5 @@
-﻿using Robust.Shared.Configuration;
+﻿using Content.Shared.Arcade.Components;
+using Robust.Shared.Configuration;
 
 namespace Content.Shared.CCVar;
 
