@@ -22,6 +22,8 @@ public sealed partial class ArcadeSystem
         _globalScoreboard = new();
         _localScoreboard = new();
         FillMissingScoreboards();
+
+        SubscribeLocalEvent<ArcadeScoreboardComponent, ArcadeGameEndedEvent>(OnArcadeScoreboardGameEnded);
     }
 
     private void FillMissingScoreboards()

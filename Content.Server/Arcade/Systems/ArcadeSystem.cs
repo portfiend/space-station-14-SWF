@@ -19,12 +19,10 @@ public sealed partial class ArcadeSystem : SharedArcadeSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ArcadeRewardComponent, ComponentInit>(OnArcadeRewardComponentInit);
-        SubscribeLocalEvent<ArcadeRewardComponent, ArcadeGameEndedEvent>(OnArcadeRewardGameEnded);
-        SubscribeLocalEvent<ArcadeScoreboardComponent, ArcadeGameEndedEvent>(OnArcadeScoreboardGameEnded);
+        InitializeScoreboards();
+        InitializeRewards();
 
         _prototypeManager.PrototypesReloaded += OnPrototypesReloaded;
-        InitializeScoreboards();
     }
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs args)

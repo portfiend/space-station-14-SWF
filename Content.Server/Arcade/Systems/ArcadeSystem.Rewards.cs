@@ -6,6 +6,12 @@ namespace Content.Server.Arcade.Systems;
 
 public sealed partial class ArcadeSystem
 {
+    private void InitializeRewards()
+    {
+        SubscribeLocalEvent<ArcadeRewardComponent, ComponentInit>(OnArcadeRewardComponentInit);
+        SubscribeLocalEvent<ArcadeRewardComponent, ArcadeGameEndedEvent>(OnArcadeRewardGameEnded);
+    }
+
     private void OnArcadeRewardComponentInit(Entity<ArcadeRewardComponent> machine, ref ComponentInit args)
     {
         var comp = machine.Comp;
