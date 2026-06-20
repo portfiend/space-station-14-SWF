@@ -12,7 +12,6 @@ namespace Content.Server.Arcade.Prototypes;
 [Prototype]
 public sealed partial class ArcadeScoreboardPrototype : IPrototype
 {
-
     [IdDataField]
     public string ID { get; private set; } = default!;
 
