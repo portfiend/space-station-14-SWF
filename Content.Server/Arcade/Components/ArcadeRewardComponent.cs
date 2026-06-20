@@ -31,6 +31,6 @@ public sealed partial class ArcadeRewardComponent : Component
     /// <summary>
     /// The remaining number of prizes the arcade machine can dispense.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int RewardAmount = 0;
 }

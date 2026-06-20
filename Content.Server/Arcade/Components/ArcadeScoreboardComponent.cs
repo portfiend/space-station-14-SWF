@@ -30,6 +30,6 @@ public sealed partial class ArcadeScoreboardComponent : Component
     /// <summary>
     /// A list of all score entries for this scoreboard.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public List<ArcadeHighScoreEntry> Scoreboard = new();
 }
