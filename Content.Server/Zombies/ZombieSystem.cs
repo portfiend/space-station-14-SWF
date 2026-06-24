@@ -267,8 +267,7 @@ namespace Content.Server.Zombies
                     if (HasComp<ZombieImmuneComponent>(uid) || cannotSpread || !_random.Prob(GetZombieInfectionChance(uid, entity.Comp)))
                         continue;
 
-                    EnsureComp<PendingZombieComponent>(uid);
-                    EnsureComp<ZombifyOnDeathComponent>(uid);
+                    AfflictWithInfection(uid);
                 }
                 else
                 {
@@ -280,6 +279,27 @@ namespace Content.Server.Zombies
                     args.Handled = true;
                 }
             }
+        }
+
+        /// <summary>
+        ///     Gives an entity a zombie infection, if it is capable of receiving one.
+        /// </summary>
+        /// <param name="uid">The entity to infect.</param>
+        public void AfflictWithInfection(EntityUid uid)
+        {
+            // Can't die or is immune to infection
+            if (!HasComp<MobStateComponent>(uid) || HasComp<ZombieImmuneComponent>(uid))
+                return;
+
+            // If the entity is already dead, just infect it
+            if (_mobState.IsDead(uid))
+            {
+                ZombifyEntity(uid);
+                return;
+            }
+
+            EnsureComp<PendingZombieComponent>(uid);
+            EnsureComp<ZombifyOnDeathComponent>(uid);
         }
 
         /// <summary>
